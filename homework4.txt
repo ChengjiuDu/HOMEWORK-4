@@ -5,33 +5,22 @@ Part 1:
 Loops are great when you want to do the same task/run the same code over and over again, and each time with a different value.
 They are great when working with arrays.
 
-
-
-
-
 2.	What is the basic syntax for a for loop? Give the higher level (more complexly worded syntax) and the more basic syntax.
 
 for(initialization; condition; final-expression) {
     statement
 }
 
-----------------------------------or-------------------------------------
+-------------------------------------------or-----------------------------------------------------------
 
 for (step 1; step 2; step 3) {
     // code block to be executed
 }
            
 
-
-
-
 3.	What does the for loop basically do?
 
 The for loop loops through a block of code a specified number of times.
-
-
-
-
 4.	Give an example of a for loop, and then explain what is going on with the code.
 
 for (let i = 0; i < 100; i++) {
@@ -45,81 +34,78 @@ Statement 3 increases a value (i++) each time the code block in the loop has bee
 By running the code, we will be seeing that i can be any number between 0 to 99. 
 
 
-
-
-
-
 5.	What two characters (used in code) represent the for loop code block? 
 
 { }
-
-
-
-
 
 6.	After the for loop code block has been executed, which step does the for loop program return to?
 
 It returns to the step 2 which is the condition evaluation. 
 
-
-
-
-
 7.	Give an example of a for loop that includes an if statement and a break statement within the if statement. Don’t give the exact example in the loops-arrays slide deck. I will not give you credit if you do. Customize it. Make it your own. I will provide links at the end of this document to other places where you can get more ideas for examples.
 
-for(int i=1;i<=10;i++){  
-        if(i==5){  
-             
-            break;  
-        }  
+function myFunction() {
+  var text = ""
+  var i;
+  for (i = 0; i < 5; i++) {
+    if (i === 3) {
+      break;
+    }
+    text += "The number is " + i + "<br>";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
 
+The result will look like this:
 
+The number is 0
+The number is 1
+The number is 2
 
-
-
-
+The loop is supposed to output the numbers 0 to 4, but the break statement exits the loop when the variable i is equal to "3".
 
 8.	Give an example of a for loop that includes an if statement and a continue statement within the if statement. Don’t give the exact example in the loops-arrays slide deck. I will not give you credit if you do. Customize it. Style it with the help of CSS in JS (refer to the loops-arrays slide deck to follow how I do it; you can also reach out to me for help!). Make it your own. I will provide links at the end of this document to other places where you can get more ideas for examples.
 
-for (let i = 0 < 10; i++) {
-if (i===5) {
-continue;
+var text = "";
+var i;
+for (i = 0; i < 10; i++) {
+  if (i === 3) { continue; }
+  text += "The number is " + i + "<br>";
 }
-Console.log(i);
-}
+document.getElementById("demo").innerHTML = text;
 
+The result will look like this:
 
+The number is 0
+The number is 1
+The number is 2
+The number is 4
+The number is 5
+The number is 6
+The number is 7
+The number is 8
+The number is 9
 
-
+A loop with a continue statement.
+A loop which will skip the step where i = 3.
 
 
 9.	Give me an example of an array. You can use whatever data type you want inside. Use the examples in the slide deck as guidelines, but make up your own.
 
 let fruitsArray = ["apple", "pear", "mango", "peach", "banana", "plum", "watermelon", "pineapple"]
 
-
-
-
-
 10.	Give me another example of an array using a DIFFFERENT data type from number 9.  You can use more than one if you like as well! Get creative. Use the examples in the slide deck as guidelines, but make up your own.
 
 let brandArray = ["nike", "adidas", "puma", "champion"]
-
-
-
-
 
 11.	Declare and initialize and array. Then create a for loop which iterates over that array. 
 
 
 let fruitsArray = ["apple", "pear", "mango", "peach", "banana", "plum", "watermelon", "pineapple"]
 
-for (i = 0; i < fruits.length; i++) {
+for (i = 0; i < fruitsArray.length; i++) {
 console.log(i)
 }
-
-
-
 
 
 12.	Give an example of a for in loop. Explain what is going on with the code. Use the loops-arrays slide deck as an inspiration and/or guide to creating your for-in loop, the related resources I have included at the end of the slide deck there, along with the other links I have provided in the Helpful Reading section at the end of this document. but make it your own! Get creative. Again, somehow involve CSS in JS in a similar way to the way you did it for number 8.
@@ -142,11 +128,6 @@ And this is the result that shows up on the screen.
 
 It is true that my favorite fruit is pineapple and its color is usually yellow and it tastes sweet!
 
-
-
-
-
-
 13.	Give an example of a for of loop. Explain what is going on with the code. Use the loops-arrays slide deck as an inspiration and/or guide to creating your for-in loop, the related resources I have included at the end of the slide deck there, along with the other links I have provided in the Helpful Reading section at the end of this document.
 
 var txt = 'JavaScript';
@@ -158,17 +139,10 @@ for (x of txt) {
 
 The for/of statement loops through the values of an iterable object.
 
-
-
-
-
 14.	Tell me what is the (main) difference between a for in loop and a for of loop.
 
 the for in loop is used to iterate over the properties of an object 
 the for of loop is used to iterate over the values.
-
-
-
 
 
 15.	Give me an example of a do while loop. Use the loops-arrays slide deck as an inspiration and/or guide to creating your for-in loop, the related resources I have included at the end of the slide deck there, along with the other links I have provided in the Helpful Reading section at the end of this document.
@@ -188,9 +162,6 @@ console.log(result);
  The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested
 
 
-
-
-
 16.	Why does a loop (in general) terminate?
 
-because it hit a break or a continue
+ The loop terminates because the condition is no longer true.
