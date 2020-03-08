@@ -1,0 +1,196 @@
+Part 1:
+
+1.	What are loops great for? Give two reasons why they are great.
+
+Loops are great when you want to do the same task/run the same code over and over again, and each time with a different value.
+They are great when working with arrays.
+
+
+
+
+
+2.	What is the basic syntax for a for loop? Give the higher level (more complexly worded syntax) and the more basic syntax.
+
+for(initialization; condition; final-expression) {
+    statement
+}
+
+----------------------------------or-------------------------------------
+
+for (step 1; step 2; step 3) {
+    // code block to be executed
+}
+           
+
+
+
+
+3.	What does the for loop basically do?
+
+The for loop loops through a block of code a specified number of times.
+
+
+
+
+4.	Give an example of a for loop, and then explain what is going on with the code.
+
+for (let i = 0; i < 100; i++) {
+    console.log(`Number is: ${i}`);
+}
+        
+Statement 1 sets a variable before the loop starts ( i = 0).
+Statement 2 defines the condition for the loop to run (i must be less than 100).
+Statement 3 increases a value (i++) each time the code block in the loop has been executed.
+
+By running the code, we will be seeing that i can be any number between 0 to 99. 
+
+
+
+
+
+
+5.	What two characters (used in code) represent the for loop code block? 
+
+{ }
+
+
+
+
+
+6.	After the for loop code block has been executed, which step does the for loop program return to?
+
+It returns to the step 2 which is the condition evaluation. 
+
+
+
+
+
+7.	Give an example of a for loop that includes an if statement and a break statement within the if statement. Don’t give the exact example in the loops-arrays slide deck. I will not give you credit if you do. Customize it. Make it your own. I will provide links at the end of this document to other places where you can get more ideas for examples.
+
+for(int i=1;i<=10;i++){  
+        if(i==5){  
+             
+            break;  
+        }  
+
+
+
+
+
+
+
+8.	Give an example of a for loop that includes an if statement and a continue statement within the if statement. Don’t give the exact example in the loops-arrays slide deck. I will not give you credit if you do. Customize it. Style it with the help of CSS in JS (refer to the loops-arrays slide deck to follow how I do it; you can also reach out to me for help!). Make it your own. I will provide links at the end of this document to other places where you can get more ideas for examples.
+
+for (let i = 0 < 10; i++) {
+if (i===5) {
+continue;
+}
+Console.log(i);
+}
+
+
+
+
+
+
+9.	Give me an example of an array. You can use whatever data type you want inside. Use the examples in the slide deck as guidelines, but make up your own.
+
+let fruitsArray = ["apple", "pear", "mango", "peach", "banana", "plum", "watermelon", "pineapple"]
+
+
+
+
+
+10.	Give me another example of an array using a DIFFFERENT data type from number 9.  You can use more than one if you like as well! Get creative. Use the examples in the slide deck as guidelines, but make up your own.
+
+let brandArray = ["nike", "adidas", "puma", "champion"]
+
+
+
+
+
+11.	Declare and initialize and array. Then create a for loop which iterates over that array. 
+
+
+let fruitsArray = ["apple", "pear", "mango", "peach", "banana", "plum", "watermelon", "pineapple"]
+
+for (i = 0; i < fruits.length; i++) {
+console.log(i)
+}
+
+
+
+
+
+12.	Give an example of a for in loop. Explain what is going on with the code. Use the loops-arrays slide deck as an inspiration and/or guide to creating your for-in loop, the related resources I have included at the end of the slide deck there, along with the other links I have provided in the Helpful Reading section at the end of this document. but make it your own! Get creative. Again, somehow involve CSS in JS in a similar way to the way you did it for number 8.
+
+
+
+const fruit = {
+    type: "pineapple",
+    color: "yellow",
+    taste: "sweet",
+    radio: true
+};
+for(property in fruit) { 
+    console.log(`${fruit[property]}`);
+}
+console.log(`It is ${fruit.radio} that my favorite fruit is ${fruit.type} and its color is usually ${fruit.color} and it tastes ${fruit.taste}!`)
+
+So I assigned some values to the property of the fruit that I chose, when the code is executed, its values will be shown. 
+And this is the result that shows up on the screen.
+
+It is true that my favorite fruit is pineapple and its color is usually yellow and it tastes sweet!
+
+
+
+
+
+
+13.	Give an example of a for of loop. Explain what is going on with the code. Use the loops-arrays slide deck as an inspiration and/or guide to creating your for-in loop, the related resources I have included at the end of the slide deck there, along with the other links I have provided in the Helpful Reading section at the end of this document.
+
+var txt = 'JavaScript';
+var x;
+
+for (x of txt) {
+  document.write(x + "<br >");
+}
+
+The for/of statement loops through the values of an iterable object.
+
+
+
+
+
+14.	Tell me what is the (main) difference between a for in loop and a for of loop.
+
+the for in loop is used to iterate over the properties of an object 
+the for of loop is used to iterate over the values.
+
+
+
+
+
+15.	Give me an example of a do while loop. Use the loops-arrays slide deck as an inspiration and/or guide to creating your for-in loop, the related resources I have included at the end of the slide deck there, along with the other links I have provided in the Helpful Reading section at the end of this document.
+
+let result = "";
+let i = 0;
+
+do {
+    i += 1;
+    result += ` ${i}`;
+
+} while (i < 20);
+
+console.log(result);
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+
+ The loop will always be executed at least once, even if the condition is false, because the code block is executed before the condition is tested
+
+
+
+
+
+16.	Why does a loop (in general) terminate?
+
+because it hit a break or a continue
